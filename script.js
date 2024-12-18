@@ -1,17 +1,18 @@
 // Function to display German Poem
 function showPeom(response) {
-  let germanPoetry = response.data.answer; // Extract the poem fact from the API response
+  let germanPoetry = response.data.answer; // Extract the poem text from the API response
   let outputDiv = document.querySelector("#output");
 
-  // Use Typewriter effect to display the fact dynamically
+  // Use Typewriter effect to display the poem dynamically
   new Typewriter(outputDiv, {
-    strings: [peom], // Display the peom text
+    strings: [germanPoetry], // Display the poem text
     autoStart: true, // Start typing immediately
     cursor: "", // Remove the cursor effect
     delay: 50, // Typing speed
     deleteSpeed: 100, // Speed of deleting each character (smaller number = faster)
   });
 }
+
 // Enable the submit button
 let submitButton = document.querySelector("#submit-btn");
 submitButton.removeAttribute("disabled");
@@ -32,6 +33,7 @@ function showDefaultPoemInfo() {
     delay: 50,
   });
 }
+
 // API setup
 function generate(event) {
   event.preventDefault();
@@ -53,7 +55,7 @@ appropriate to make the poem even more impressive. Make sure that the
  <br />
 At the end of each poem, add the following sentence with a charming 
 conclusion: 
-<strong>German AI Poem Generator - Words that touch the soul</strong>. 
+<strong>Deutscher AI-Gedicht-Generator </strong>. 
 Make the experience unforgettable and unique!`;
 
   let userInput = document.querySelector("#user-input");
@@ -62,7 +64,7 @@ Make the experience unforgettable and unique!`;
   The poem should be 4 lines long, rich in emotion, imagery, and depth. Each line should be separated by a <br />. 
   Use poetic language to evoke strong feelings and create a vivid mental picture. 
   End the poem with the following signature: 
-  <strong>German AI Poem Generator – Words that touch the soul</strong>.`;
+  <strong>Deutscher AI-Gedicht-Generator – </strong>.`;
 
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?context=${encodeURIComponent(
     context
@@ -73,12 +75,12 @@ Make the experience unforgettable and unique!`;
 
   let germanPoetryElement = document.querySelector("#output");
   germanPoetryElement.classList.remove("hidden");
-  germanPoetryElement.innerHTML = `<div class="waiting">⏳ Generating beautiful and inspiring German poem about ${userInput.value}...</div>`;
+  germanPoetryElement.innerHTML = `<div class="waiting">⏳ schreiben schöne und inspirierende deutsche Gedichte über ${userInput.value}...</div>`;
 
   // API call
   axios
     .get(apiUrl)
-    .then(showPeomFact)
+    .then(showPeom)
 
     .finally(() => {
       submitButton.removeAttribute("disabled"); // Re-enable the submit button
@@ -89,5 +91,5 @@ Make the experience unforgettable and unique!`;
 let germanPoetryForm = document.querySelector("#poem-generator");
 germanPoetryForm.addEventListener("submit", generate);
 
-// Call the showPoem function
+// Call the showDefaultPoemInfo function
 showDefaultPoemInfo();
