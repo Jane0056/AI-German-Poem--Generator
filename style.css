@@ -96,3 +96,15 @@ header h1 {
     /* Slight shadow for depth */
     margin-bottom: 15px;
 }
+
+/* Sub-header title */
+header h3 {
+    font-family: 'Poppins', sans-serif;
+    /* Modern font to contrast the header */
+    font-size: 24px;
+    font-weight: 400;
+    color: #4a3b6e;
+    /* Muted purple tone for harmony */
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
