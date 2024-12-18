@@ -151,8 +151,40 @@ button {
 }
 
 /* Input field */
-input[type="text"] {
-    width: 100%;
+.user-input {
+    width: 70%;
     background-color: #f9f9f9;
     color: #333;
+    border: 2px solid #6a5b8c;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #6a5b8c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4a3b6e;
+}
+
+/* Submit Button Active Effect */
+.submit-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+}
+
+/* Hint text */
+.hint {
+    font-size: 14px;
+    color: #6e59a8;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
 }
