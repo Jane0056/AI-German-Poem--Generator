@@ -4,3 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Font styles */
+body {
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(135deg, #6a5b8c, #8c6b9c, #c1a0e6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
