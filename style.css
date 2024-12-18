@@ -120,3 +120,12 @@ header h3 {
     line-height: 1.6;
     /* Add breathing space between lines */
 }
+
+/* Hover animations for interactivity */
+header h1:hover,
+header h3:hover {
+    color: #6e59a8;
+    /* Slightly lighter purple on hover for engagement */
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
