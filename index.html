@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <title>AI German Poem Generator</title>
-    
+
 </head>
+
 <body>
     <div class="poem-container">
         <header>
@@ -17,11 +19,27 @@
             </div>
             <h3>Willkommen in der Welt der Poesie – Lass uns gemeinsam Worte zaubern! ✨🧾</h3>
             <br>
-            <p class="subtitle">Entfessle deine Kreativität! Stelle deine poetischen Fragen, entdecke einzigartige Verse und lass die Magie der Worte
-               lebendig werden.
+            <p class="subtitle">Entfessle deine Kreativität! Stelle deine poetischen Fragen, entdecke einzigartige Verse
+                und lass die Magie der Worte
+                lebendig werden.
             </p>
         </header>
+
+        <!-- Form for input instructions -->
+        <div class="form-section">
+            <form id="poem-generator">
+                <input type="text" id="user-input" autofocus class="user-input" required
+                    placeholder="Welche Gedanken möchtest du in Poesie verwandeln? Teile sie mit uns!"
+                    autocomplete="off" />
+                <button type="submit" value="Generate Poem" class="submit-btn" id="submit-btn">Erzeuge ein
+                    Gedicht</button>
+            </form>
+            <div class="hint">z.B., "Schreibe ein Gedicht über den Herbst" oder "Erstelle ein Gedicht über die Liebe"
+            </div>
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>
