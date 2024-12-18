@@ -83,3 +83,16 @@ header {
     transform: scale(1.1);
     /* Subtle zoom on hover for interactivity */
 }
+
+/* Main header title */
+header h1 {
+    font-family: 'Merriweather', serif;
+    /* Add an elegant, poetic serif font */
+    font-size: 48px;
+    font-weight: 700;
+    color: #3c2a58;
+    /* Deep purple for an artistic vibe */
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+    /* Slight shadow for depth */
+    margin-bottom: 15px;
+}
