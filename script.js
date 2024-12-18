@@ -12,3 +12,23 @@ function showPeom(response) {
     deleteSpeed: 100, // Speed of deleting each character (smaller number = faster)
   });
 }
+// Enable the submit button
+let submitButton = document.querySelector("#submit-btn");
+submitButton.removeAttribute("disabled");
+
+function showDefaultPoemInfo() {
+  let germanPoetryInfo = `Die deutsche Poesie ist eine zeitlose Kunstform, die für ihre Tiefe, Schönheit und kraftvolle emotionale Ausdruckskraft gefeiert wird.<br />
+    Von den romantischen Versen Johann Wolfgang von Goethes und Friedrich Schillers bis hin zu den modernen Reflexionen Rainer Maria Rilkes haben deutsche Dichter einen unauslöschlichen Eindruck in der Weltliteratur hinterlassen.<br />
+    Themen wie Liebe, Natur, Philosophie und die menschliche Existenz schwingen in ihren Worten mit und verbinden Kulturen sowie Generationen.<br />
+    Erlebe die Schönheit der deutschen Poesie und tauche ein in eine Welt voller Inspiration und Fantasie.<br />
+    <strong>Entdecke deine Verse mit dem Deutschen Gedichtgenerator</strong>
+    `;
+
+  let outputDiv = document.querySelector("#output");
+
+  new Typewriter(outputDiv, {
+    strings: [germanPoetryInfo],
+    autoStart: true,
+    delay: 50,
+  });
+}
