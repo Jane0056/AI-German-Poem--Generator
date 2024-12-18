@@ -108,3 +108,15 @@ header h3 {
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 15px;
 }
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 18px;
+    color: #5a4b78;
+    /* Softer purple tone for a dreamy feel */
+    opacity: 0.9;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 1.6;
+    /* Add breathing space between lines */
+}
