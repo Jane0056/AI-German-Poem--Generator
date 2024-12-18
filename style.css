@@ -234,3 +234,35 @@ button {
     margin-top: 10px;
     text-align: center;
 }
+
+.hint:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+    transform: translateY(-3px);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    font-size: 16px;
+    color: #6e59a8;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #7e6ba8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #c1a0e6;
+    transform: scale(1.1);
+    transform: translateY(-3px);
+}
+
+footer a:active {
+    color: #8c6b9c;
+
+}
