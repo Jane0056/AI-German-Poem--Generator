@@ -44,3 +44,16 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     /* Increase shadow for a floating effect */
 }
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Add more space for an airy, artistic feel */
+    padding: 20px;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    /* Soft gradient for a dreamy, poetic feel */
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
