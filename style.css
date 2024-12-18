@@ -79,7 +79,6 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-
 .poem-logo img:hover {
     transform: scale(1.1);
     /* Subtle zoom on hover for interactivity */
@@ -166,18 +165,65 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Submit Button Hover Effect */
+
 .submit-btn:hover {
     background-color: #4a3b6e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+    transform: translateY(-3px);
 }
 
 /* Submit Button Active Effect */
 .submit-btn:active {
     transform: translateY(2px);
     box-shadow: none;
+    transform: scale(1.1);
 }
 
 .submit-btn:disabled {
     opacity: 0.5;
+}
+
+/* Output Section */
+
+.output {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 18px;
+    color: #3c2a58;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 5px solid #4a3b6e;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    font-style: italic;
+    transition: background-color 0.3s ease;
+}
+
+.output:hover {
+    background-color: #f7f9fc;
+    transform: scale(1.1);
+    /* Subtle zoom on hover for interactivity */
+    transform: translateY(-3px);
+}
+
+.output strong {
+    color: #6a5b8c;
+}
+
+.hidden {
+    display: none;
+}
+
+.waiting {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Hint text */
