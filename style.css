@@ -63,7 +63,7 @@ header {
 
 /* Main header title */
 header h1 {
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 700;
     color: #3c2a58;
 }
@@ -71,7 +71,7 @@ header h1 {
 
 /* Sub-header title */
 header h3 {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: 400;
     color: #4a3b6e;
     margin-bottom: 15px;
@@ -80,7 +80,7 @@ header h3 {
 
 /* Subtitle styling */
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 16px;
     color: #5a4b78;
     font-style: italic;
     margin-top: 10px;
