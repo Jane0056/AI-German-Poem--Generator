@@ -54,8 +54,8 @@ header {
 }
 
 .poem-logo img {
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     margin-right: 15px;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -137,7 +137,7 @@ header h3 {
 .output {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.95);
-    font-size: 1rem;
+    font-size: 16px;
     color: #3c2a58;
     border-radius: 10px;
     padding: 20px;
@@ -219,15 +219,19 @@ footer a:active {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     header h3 {
-        font-size: 1rem;
+        font-size: 18px;
     }
 
     .poem-container {
         padding: 15px;
+    }
+
+    .subtitle {
+        font-size: 16px;
     }
 
 
@@ -254,15 +258,19 @@ footer a:active {
 /* Tablets and medium devices */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 30px;
     }
 
     header h3 {
-        font-size: 1.4rem;
+        font-size: 18px;
     }
 
     .poem-container {
-        padding: 30px;
+        padding: 15px;
+    }
+
+    .subtitle {
+        font-size: 16px;
     }
 
     .user-input,
