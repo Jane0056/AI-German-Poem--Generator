@@ -219,30 +219,35 @@ footer a:active {
     }
 
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     header h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .poem-container {
-        padding: 20px;
+        padding: 15px;
     }
 
 
     .user-input,
     .submit-btn {
-        font-size: 0.9rem;
-        padding: 10px 12px;
+        font-size: 0.8rem;
+        padding: 8px 10px;
     }
 
     .output {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        padding: 15px;
     }
 
     .hint {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 }
 
