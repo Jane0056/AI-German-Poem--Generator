@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
     overflow-x: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
     width: 100%;
     max-width: 900px;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     padding: 20px;
     backdrop-filter: blur(10px);
@@ -32,16 +32,14 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
 }
 
 /* Header styles */
 header {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
-    border-radius: 15px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Logo section */
@@ -53,6 +51,7 @@ header {
     flex-direction: row;
 }
 
+
 .poem-logo img {
     height: 80px;
     width: 80px;
@@ -62,29 +61,34 @@ header {
 }
 
 /* Main header title */
+
 header h1 {
+    font-family: 'Merriweather', serif;
     font-size: 30px;
     font-weight: 700;
     color: #3c2a58;
+    margin-bottom: 15px;
 }
 
 
 /* Sub-header title */
 header h3 {
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #4a3b6e;
     margin-bottom: 15px;
 }
 
-
 /* Subtitle styling */
+
 .subtitle {
     font-size: 16px;
     color: #5a4b78;
     font-style: italic;
     margin-top: 10px;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 /* Poem input form styling */
@@ -92,6 +96,9 @@ header h3 {
 .form-section {
     margin-bottom: 30px;
     width: 100%;
+    padding: 20px;
+    box-shadow: 0px 15px 40px rgba(65, 50, 100, 0.1);
+    border-radius: 12px;
 }
 
 .user-input,
@@ -104,8 +111,6 @@ header h3 {
     border: none;
 }
 
-
-
 /* Input field */
 .user-input {
     background-color: #f9f9f9;
@@ -113,9 +118,25 @@ header h3 {
     border: 2px solid #6a5b8c;
 }
 
-/* Submit button */
+/* Focus Effect on User Input */
+.user-input:focus {
+    border-color: #5a4b78;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+    transform: scale(1.02);
+}
+
+/* General placeholder styling */
+.user-input::placeholder {
+    color: #6c757d;
+    font-size: 16px;
+    font-style: italic;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Submit Button Styling */
 .submit-btn {
-    background-color: #6a5b8c;
+    background: linear-gradient(135deg, #6a5b8c, #8c6b9c, #c1a0e6);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -125,14 +146,21 @@ header h3 {
 
 .submit-btn:hover {
     background-color: #4a3b6e;
+    transform: translateY(-3px) scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Submit Button Active Effect */
+.submit-btn:active {
+    transform: translateY(2px) scale(1.1);
+    box-shadow: none;
 }
 
 .submit-btn:disabled {
     opacity: 0.5;
 }
 
-/* Output Section */
+/* Output section */
 
 .output {
     margin-top: 20px;
@@ -220,34 +248,59 @@ footer a:active {
 
     header h1 {
         font-size: 24px;
+        text-align: center;
     }
 
     header h3 {
-        font-size: 18px;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .poem-container {
         padding: 15px;
+        max-width: 95%;
     }
 
     .subtitle {
         font-size: 16px;
     }
 
-
-    .user-input,
-    .submit-btn {
-        font-size: 0.8rem;
-        padding: 8px 10px;
+    form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
     }
 
-    .output {
-        font-size: 0.8rem;
+
+    #user-input,
+    #submit-btn {
+        width: 100%;
+    }
+
+    .user-input {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .user-input::placeholder {
+        font-size: 14px;
+        color: #4a4a4a;
+        opacity: 1;
+    }
+
+    #submit-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    #output {
+        font-size: 14px;
         padding: 15px;
     }
 
     .hint {
-        font-size: 0.7rem;
+        font-size: 12px;
     }
 
     footer {
@@ -257,49 +310,67 @@ footer a:active {
 
 /* Tablets and medium devices */
 @media screen and (max-width: 768px) {
+    .poem-container {
+        padding: 20px;
+    }
+
     header h1 {
-        font-size: 30px;
+        font-size: 28px;
+        text-align: center;
     }
 
     header h3 {
-        font-size: 18px;
+        font-size: 22px;
+        text-align: center;
     }
 
-    .poem-container {
-        padding: 15px;
+    form {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .subtitle {
+    #user-input {
         font-size: 16px;
+        padding: 14px 18px;
     }
 
-    .user-input,
-    .submit-btn {
-        font-size: 1rem;
-        padding: 12px 15px;
+    .user-input::placeholder {
+        font-size: 15px;
+        color: #555;
     }
 
-    .output {
-        font-size: 1rem;
+    #submit-btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    #output {
+        font-size: 16px;
     }
 }
 
 /* Larger mobile screens and smaller tablets */
+/* Larger mobile screens and smaller tablets */
 @media screen and (max-width: 1024px) {
     header h1 {
-        font-size: 2.8rem;
+        font-size: 32px;
     }
 
     header h3 {
-        font-size: 1.6rem;
+        font-size: 24px;
     }
 
     .poem-container {
-        padding: 40px;
+        padding: 30px;
+    }
+
+    .user-input::placeholder {
+        font-size: 17px;
+        color: #6c757d;
     }
 
     .output {
-        font-size: 1.2rem;
-        padding: 25px;
+        font-size: 18px;
+        padding: 20px;
     }
 }
