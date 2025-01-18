@@ -104,3 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { once: true }
   ); // Focuses only on the first click
 });
+
+$(document).ready(function () {
+  // Your jQuery code here
+  console.log("jQuery is working!");
+});
