@@ -93,3 +93,14 @@ germanPoetryForm.addEventListener("submit", generate);
 
 // Call the showDefaultPoemInfo function
 showDefaultPoemInfo();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inputField = document.getElementById("user-input");
+  window.addEventListener(
+    "click",
+    function () {
+      inputField.focus();
+    },
+    { once: true }
+  ); // Focuses only on the first click
+});
